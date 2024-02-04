@@ -1,7 +1,22 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
+  },
+]);
+
 function App() {
   return (
     <>
-      <h1 className="text-2xl text-center">hello world</h1>
+      <RouterProvider router={router} />
     </>
   );
 }
